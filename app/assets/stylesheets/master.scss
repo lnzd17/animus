@@ -7,15 +7,49 @@
   position: relative;
   font-family: 'arsenalregular', sans-serif;
   color: #575549;
-  background: #DFDDCE;
+}
+
+body{
+  background-color: #DFDDCE;
 }
 .add-header{
+  width: 100%;
+  display:flex;
+  flex-wrap: nowrap;
 }
 
 .style-h1{
-  text-align: left;
+  flex:1;
   font-family: 'arsenalbold', sans-serif;
   font-size: 3em;
+  height:45px;
+  line-height: 45px;
+  padding:20px;
+  color:#668290;
+  text-align: left;
+}
+
+.add-nav-links{
+  flex:1;
+  text-align: right;
+  height:45px;
+  line-height: 45px;
+  padding: 20px;
+  font-size:1.5em;
+}
+
+ul{
+  list-style-type:none;
+  display: inline-flex;
+}
+
+li{
+  margin-left:25px;
+  color: #668290;
+}
+
+.fa-bars{
+  color: #668290;
 }
 
 .make-flex-container{
@@ -34,9 +68,13 @@
   height: 300px;
   background-color: #99B0B8;
   border: 0;
-  // box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   font-size: 2em;
+}
+
+.make-flexible-project-box:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .test{
