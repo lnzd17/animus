@@ -1,14 +1,15 @@
 <h1 class="style-h1">Animus</h1>
 <br/>
 
+<div class="make-flex-container">
+  <% @projects.each do |project| %>
 
-<% @projects.each do |project| %>
-  <div>
-    <p><%= project.title %></p> <br/>
-    <p><%= project.note %></p> <br/>
-    <p><%= project.label%></p> <br/>
-    <p><%= project.priority%></p> <br/>
-  </div>
+    <div class="make-flexible-project-box">
+      <div class="test">
+      <%= project.title %> <br/>
+      <%= project.priority%> <br/>
+      </div>
+    </div>
 
-  <hr />
-<% end %>
+  <% end %>
+</div>
