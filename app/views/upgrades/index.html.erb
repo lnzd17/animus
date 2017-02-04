@@ -1,0 +1,12 @@
+<h1>Suggestions</h1>
+<br/>
+
+<% @upgrades.each do |upgrade| %>
+  <div>
+    <p><%= upgrade.title %></p> <br/>
+    <p><%= upgrade.idea %></p> <br/>
+    <p><%= upgrade.complete.inspect%></p> <br/>
+  </div>
+
+  <hr />
+<% end %>

@@ -1,0 +1,10 @@
+<h1> add new suggestion </h1>
+
+<div>
+  <%= simple_form_for @upgrade do |f| %>
+    <%= f.input :title %>
+    <%= f.input :idea %>
+  </br>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>
