@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
   def index
-  end  
+    @projects = Project.all
+  end
 end
