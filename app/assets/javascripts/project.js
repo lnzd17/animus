@@ -1,7 +1,8 @@
-$(document).on('ready page:load', function () {
+
+$(document).on('turbolinks:load', function() {
   $("form").find("div").addClass("simple-form-children");
   $(".simple-form-children").children().addClass("form-items");
-  $("input").last().css("width","50px");
+  $("input").last().addClass("submit-button");
 
 
 });

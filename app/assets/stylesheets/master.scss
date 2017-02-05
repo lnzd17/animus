@@ -6,11 +6,16 @@
   padding:0;
   position: relative;
   font-family: 'arsenalregular', sans-serif;
-  color: #575549;
+  color: #5F7A86;
+}
+
+a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 body{
-  background-color: #DFDDCE;
+  background-color: #FCFAF4;
 }
 .add-flexible-header{
   width: 100%;
@@ -25,7 +30,7 @@ body{
   height:45px;
   line-height: 45px;
   padding:20px;
-  color:#668290;
+  color:#C9643C;
   text-align: left;
 }
 
@@ -66,7 +71,7 @@ li{
   margin: 10px;
   width:300px;
   height: 300px;
-  background-color: #99B0B8;
+  background-color: #D1E1E7;
   border: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -81,28 +86,47 @@ li{
 .simple_form{
   padding:10px;
   display:flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width:960px;
   margin-left:auto;
   margin-right:auto;
-  display:flex;
+  border: 1px solid black;
 }
 
 .simple-form-children{
+  display:flex;
   flex:1;
   margin:10px;
   padding:20px;
+  border: 1px solid black;
 
 }
 
 .form-items{
   margin:5px;
   height:50px;
-  width:200px;
   line-height: 50px;
+  flex:1;
 }
 
 .style-h1{
   text-align: center;
+}
+
+.submit-button{
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   background-color: #D1E1E7;
+   cursor:pointer;
+   font-size:18px;
+   text-decoration:none;
+   border: none;
+   outline: none;
+   width:100px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+}
+
+.submit-button:active{
+  box-shadow:none;
 }
