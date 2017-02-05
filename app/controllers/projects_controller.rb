@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @note = Note.new
   end
 
   private

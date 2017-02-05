@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
 
-  has_many :places
-  
+  has_many :notes
+
   LABELS = {
     'Painting': "1",
     'Architecture': "2",

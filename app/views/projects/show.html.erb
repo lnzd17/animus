@@ -1,1 +1,21 @@
-<h1> Specific Project Page</h1>
+<h1> <%= @project.title %></h1>
+<small><%= @project.humanized_labels %></small>
+
+<%= simple_form_for @note, url: project_notes_path(@project) do |f| %>
+        <%= f.input :note_text %>
+        <%= f.submit "Add Note"%>
+<% end %>
+
+<div class="make-flex-container">
+<% if @project.notes.present? %>
+    <% @project.notes.each do |note| %>
+      <%= link_to project_notes_path(@project) do %>
+        <div class="make-flexible-project-box">
+          <div class="add-padding-to-project-box">
+            <%= note.note_text %>
+          </div>
+        </div>
+      <%end %>
+    <%end %>
+<%end %>
+</div>
