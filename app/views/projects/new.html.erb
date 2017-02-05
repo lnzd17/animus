@@ -5,8 +5,8 @@
 
 <div>
   <%= simple_form_for @project do |f| %>
-    <%= f.input :title, label: "Give your a idea a name:" %>
-    <%= f.input :priority, label: "Priority:" %>
+    <%= f.input :title, label: "Give your a idea a name" %>
+    <%= f.input :label, label: "Select Category", as: :select, collection: Project::LABELS %>
   </br>
     <%= f.submit 'Create' %>
   <% end %>

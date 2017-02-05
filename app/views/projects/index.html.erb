@@ -5,8 +5,11 @@
   <% @projects.each do |project| %>
     <%= link_to project_path(project) do %>
       <div class="make-flexible-project-box">
-          <%= project.title %> <br/>
-          <%= project.priority%> <br/>
+        <div class="add-padding-to-project-box">
+          <h3><%= project.title %></h3>
+          <br/>
+          <small><%= project.humanized_labels %></small>
+        </div>
       </div>
     <% end %>
   <% end %>
