@@ -12,7 +12,7 @@
 body{
   background-color: #DFDDCE;
 }
-.add-header{
+.add-flexible-header{
   width: 100%;
   display:flex;
   flex-wrap: nowrap;
@@ -80,4 +80,9 @@ li{
 .test{
   padding:10px;
   background-color: #99B0B8;
+}
+
+.simple_form{
+  border:1px solid black;
+  padding:10px;
 }
