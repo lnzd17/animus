@@ -1,11 +1,14 @@
-<h1>Add a Project</h1>
+<br/>
+<h1 class="style-h1">New Idea</h1>
+<br/>
+<br/>
 
 <div>
   <%= simple_form_for @project do |f| %>
-    <%= f.input :title %>
-    <%= f.input :note %>
-    <%= f.input :label %>
-    <%= f.input :priority %>
+    <%= f.input :title, label: "Give your a idea a name:" %>
+    <%= f.input :note, label: "What's your idea?" %>
+    <%= f.input :label, label: "What does your idea relate to?" %>
+    <%= f.input :priority, label: "How much do you want to turn this idea into reality?" %>
   </br>
     <%= f.submit 'Create' %>
   <% end %>

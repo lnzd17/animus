@@ -18,7 +18,7 @@ body{
   flex-wrap: nowrap;
 }
 
-.style-h1{
+.style-logo{
   flex:1;
   font-family: 'arsenalbold', sans-serif;
   font-size: 3em;
@@ -77,12 +77,32 @@ li{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.test{
-  padding:10px;
-  background-color: #99B0B8;
-}
 
 .simple_form{
-  border:1px solid black;
   padding:10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width:960px;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+}
+
+.simple-form-children{
+  flex:1;
+  margin:10px;
+  padding:20px;
+
+}
+
+.form-items{
+  margin:5px;
+  height:50px;
+  width:200px;
+  line-height: 50px;
+}
+
+.style-h1{
+  text-align: center;
 }
