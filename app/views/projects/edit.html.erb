@@ -1,0 +1,14 @@
+
+<div>
+<br />
+<br />
+<%= simple_form_for @project do |f| %>
+<%= f.input :label, label:"", as: :radio_buttons, collection: Project::LABELS %>
+<br/>
+<%= f.input :title %>
+
+<%= f.input :priority %>
+<br />
+<%= f.submit 'Update' %>
+<% end %>
+</div>

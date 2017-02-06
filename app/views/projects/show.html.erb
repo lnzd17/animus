@@ -1,32 +1,42 @@
-<br/>
-<br/>
 
-<div>
-<h1> <%= @project.title %></h1>
-<small><%= @project.humanized_labels %></small>
-</div>
 
-<div>
+<div class="add-long-flexible-box">
   <ul>
-  <li>Add new Note</li>
-  </ul
+    <li class="title"><h1><%= @project.title %></h1></li>
+    <li class="info"> Category: <%= @project.humanized_labels %> </li>
+    <li class="info"> Priority: <%= @project.priority %></li>
+    <li class="change"><button class="submit-button"><%= link_to 'Edit', edit_project_path(@project)%></button></li>
+    <li class="change"><button class="submit-button"><%= link_to 'Delete', project_path(@project), method: :delete %> </button></li>
+  </ul>
 </div>
 
-<%= simple_form_for @note, url: project_notes_path(@project) do |f| %>
-        <%= f.input :note_text %>
-        <%= f.submit "Add Note"%>
-<% end %>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div>
+  <%= simple_form_for @note, url: project_notes_path(@project) do |f| %>
+          <%= f.input :note_text %>
+          <br/>
+          <%= f.submit "Add Note"%>
+  <% end %>
+</div>
+
+<br/>
+<br/>
 
 <div class="make-flex-container">
-<% if @project.notes.present? %>
-    <% @project.notes.each do |note| %>
-      <%= link_to project_notes_path(@project) do %>
-        <div class="make-flexible-project-box">
-          <div class="add-padding-to-project-box">
-            <%= note.note_text %>
+  <% if @project.notes.present? %>
+      <% @project.notes.each do |note| %>
+        <%= link_to project_notes_path(@project) do %>
+          <div class="make-flexible-project-box">
+            <div class="add-padding-to-project-box">
+              <%= note.note_text %>
+            </div>
           </div>
-        </div>
+        <%end %>
       <%end %>
-    <%end %>
-<%end %>
+  <%end %>
 </div>

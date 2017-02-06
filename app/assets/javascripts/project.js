@@ -5,4 +5,5 @@ $(document).on('turbolinks:load', function() {
   $("input").last().addClass("submit-button");
 
 
+
 });
