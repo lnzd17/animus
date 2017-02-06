@@ -1,5 +1,16 @@
+<br/>
+<br/>
+
+<div>
 <h1> <%= @project.title %></h1>
 <small><%= @project.humanized_labels %></small>
+</div>
+
+<div>
+  <ul>
+  <li>Add new Note</li>
+  </ul
+</div>
 
 <%= simple_form_for @note, url: project_notes_path(@project) do |f| %>
         <%= f.input :note_text %>

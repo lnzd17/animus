@@ -1,15 +1,16 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.order(:priority).all
+    @project= Project.new
   end
 
   def new
-    @project = Project.new
   end
 
   def create
     Project.create(project_params)
-    redirect_to root_path
+    @project = Project.last
+    redirect_to project_path(@project)
   end
 
 

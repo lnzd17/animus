@@ -1,13 +1,14 @@
-<br/>
+
+
+<!-- NOT IN USE <br/>
 <h1 class="style-h1">New Idea</h1>
 <br/>
 <br/>
 
 <div>
   <%= simple_form_for @project do |f| %>
-    <%= f.input :title, label: "Give your a idea a name" %>
-    <%= f.input :label, label: "Select Category", as: :select, collection: Project::LABELS %>
+    <%= f.input :label, label: "Select Category", as: :radio_buttons, collection: Project::LABELS %>
   </br>
     <%= f.submit 'Create' %>
   <% end %>
-</div>
+</div> -->

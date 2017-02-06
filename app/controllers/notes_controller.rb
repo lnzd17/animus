@@ -6,6 +6,9 @@ class NotesController < ApplicationController
 
   end
 
+  def new
+  end
+
   def create
     @project = Project.find(params[:project_id])
     @project.notes.create(note_params)

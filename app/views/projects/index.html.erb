@@ -1,6 +1,17 @@
 <br/>
 <br/>
 
+<div>
+  <%= simple_form_for @project do |f| %>
+    <%= f.input :label, label:"", as: :radio_buttons, collection: Project::LABELS %>
+  </br>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>
+
+<br/>
+<br/>
+
 <div class="make-flex-container">
   <% @projects.each do |project| %>
     <%= link_to project_path(project) do %>
