@@ -30,9 +30,9 @@
 <div class="make-flex-container">
   <% if @project.notes.present? %>
       <% @project.notes.each do |note| %>
-        <%= link_to project_notes_path(@project) do %>
-          <div class="make-flexible-project-box">
-            <div class="add-padding-to-project-box">
+        <%= link_to project_note_path(@project ,note) do %>
+          <div class="make-flexible-project-box-notes">
+            <div class="add-padding-to-project-box-notes">
               <%= note.note_text %>
             </div>
           </div>

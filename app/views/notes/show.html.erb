@@ -1,0 +1,9 @@
+<br/>
+<br/>
+<%=@project.title %>
+<br/>
+<%=@note.note_text%>
+</br>
+</br>
+<button class="submit-button"><%= link_to 'Edit', edit_project_note_path(@project, @note)%></button></li>
+<button class="submit-button"><%= link_to 'Delete', project_note_path(@project, @note), method: :delete %> </button>

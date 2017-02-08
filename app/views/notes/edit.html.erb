@@ -1,0 +1,8 @@
+<div>
+<br />
+<br />
+<%= simple_form_for @note, url: project_note_path(@project, @note) do |f| %>
+<%= f.input :note_text %>
+<%= f.submit 'Update' %>
+<% end %>
+</div>
