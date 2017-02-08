@@ -3,7 +3,7 @@
 
 <div>
   <%= simple_form_for @project do |f| %>
-    <%= f.input :label, label:"", as: :radio_buttons, collection: Project::LABELS %>
+    <%= f.input :label, label:"Category", as: :radio_buttons, collection: Project::LABELS %>
   </br>
     <%= f.submit 'Create' %>
   <% end %>
