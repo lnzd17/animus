@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   def create
     Project.create(project_params)
     @project = Project.last
-    redirect_to project_path(@project)
+    redirect_to edit_project_path(@project)
   end
 
 
