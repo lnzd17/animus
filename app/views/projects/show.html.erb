@@ -1,42 +1,63 @@
 
-
-<div class="add-long-flexible-box">
+<div class="row">
+  <div class="col s12">
+<div class="card horizontal green accent-2 z-depth-1 ">
+  <div class="card-stacked">
+  <div class="cad-content">
+     <span class="card-title"><h4><%= @project.title %></h4></span>
   <ul>
-    <li class="title"><h1><%= @project.title %></h1></li>
-    <li class="info"> Category: <%= @project.humanized_labels %> </li>
-    <li class="info"> Priority: <%= @project.priority %></li>
-    <li class="change"><button class="submit-button"><%= link_to 'Edit', edit_project_path(@project)%></button></li>
-    <li class="change"><button class="submit-button"><%= link_to 'Delete', project_path(@project), method: :delete %> </button></li>
+    <li > Category: <%= @project.humanized_labels %> </li>
+    <li > Priority: <%= @project.priority %></li>
+    <li> <%= link_to 'Edit', edit_project_path(@project), class: "waves-effect waves-light btn"%></li>
+    <li><%= link_to 'Delete', project_path(@project), method: :delete, class: 'waves-effect waves-light btn' %></li>
   </ul>
 </div>
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-<div>
-  <%= simple_form_for @note, url: project_notes_path(@project) do |f| %>
-          <%= f.input :note_text %>
-          <br/>
-          <%= f.submit "Add Note"%>
-  <% end %>
+</div>
+</div>
+</div>
 </div>
 
+</br>
+</br>
+
+
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn right" href="#modal1">Add Note to Project</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
+        <div class="input-field">
+            <%= f.input :note_text, wrapper_html: { class: 'materialize-textarea' } %>
+            <br/>
+            <br/>
+              <br/>
+                <br/>
+            <a class="modal-action modal-close waves-effect waves-green btn"><%= f.submit 'Add' %></a>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+
+
 <br/>
 <br/>
 
-<div class="make-flex-container">
+<div class="row">
   <% if @project.notes.present? %>
       <% @project.notes.each do |note| %>
+      <div class="col s12 l3">
         <%= link_to project_note_path(@project ,note) do %>
-          <div class="make-flexible-project-box-notes">
-            <div class="add-padding-to-project-box-notes">
+        <div class="card  white z-depth-1 hoverable">
+          <div class="card-content black-text">
               <%= note.note_text %>
             </div>
           </div>
         <%end %>
+      </div>
       <%end %>
   <%end %>
 </div>

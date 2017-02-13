@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
 
-  has_many :notes
+  has_many :notes , dependent: :destroy
 
   LABELS = {
     'Painting': "1",

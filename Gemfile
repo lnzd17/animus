@@ -62,3 +62,9 @@ gem 'simple_form'
 
 #adds font awesome
 gem "font-awesome-rails"
+
+#adds materilize
+gem 'materialize-sass'
+
+#adds materilze-form
+gem 'materialize-form'

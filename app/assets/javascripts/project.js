@@ -1,9 +1,6 @@
 
 $(document).on('turbolinks:load', function() {
-  $(".simple_form").find("div").addClass("simple-form-children");
-  $(".simple-form-children").children().addClass("form-items");
-  $("input").last().addClass("submit-button");
-
-
+  $('.new_project').find('label').css("margin-right", "30px");
+     $('.modal').modal();
 
 });

@@ -10,16 +10,16 @@
   </head>
 
   <body>
-    <div class="add-flexible-header">
-      <h1 class="style-logo"><%= link_to "Animus", projects_path %></h1>
-      <div class="add-nav-links">
-        <ul>
-          <li>Sign In</li>
-          <li>Suggestions</li>
-          <li><i class="fa fa-bars" aria-hidden="true"></i></li>
-        <ul/>
-      </div>
+
+    <nav>
+    <div class="nav-wrapper white">
+          <%= link_to "Animus", projects_path, class:"brand-logo" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sign In</a></li>
+        <li><a href="badges.html">Feedback</a></li>
     </div>
+  </nav>
+
 
     <%= yield %>
   </body>
