@@ -2,12 +2,14 @@
 @import "materialize";
 
 body{
-  background-color: #5e35b1;
+  // background-color: #5e35b1;
+  background-color: white;
 }
 
 
 .new_project{
   display: inline-flex;
+  color:black;
 
 }
 
@@ -17,13 +19,13 @@ nav{
 
 nav .brand-logo{
   margin-left: 15px;
-  color: black;
+  color: white;
 }
 
 
 
 [type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after{
-  border-color: white;
+  border-color: black;
 }
 
 [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {
@@ -37,6 +39,11 @@ nav .brand-logo{
   background-color: #ffa000;
   margin: 5px;
   color: black;
+}
+
+a{
+  color:#ffa000;
+
 }
 
 .btn:hover{
@@ -53,7 +60,6 @@ li{
   margin-right:auto;
   max-width: 900px;
   padding: 5px;
-  background-color:rgba(0,0,0,0.2);
 }
 
 h4{
@@ -62,23 +68,23 @@ h4{
 
 /* label color */
   .input-field label {
-    color: white;
+    color: black;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label {
-    color: white;
+    color: black;
   }
 
   /* label focus color */
   .input-field input[type=number]:focus + label {
-    color: white;
+    color: black;
   }
 
   /* label underline focus color */
   .input-field input[type=text] {
     border-bottom: 1px solid white;
     box-shadow: 0 1px 0 0 #000;
-    color:white;
+    color:black;
   }
 
 
@@ -86,14 +92,14 @@ h4{
   .input-field input[type=text]:focus {
     border-bottom: 1px solid white;
     box-shadow: 0 1px 0 0 #000;
-    color:white;
+    color:black;
   }
 
   /* label underline color */
   .input-field input[type=number] {
     border-bottom: 1px solid white;
     box-shadow: 0 1px 0 0 #000;
-    color:white;
+    color:black;
   }
 
 
@@ -101,7 +107,7 @@ h4{
   .input-field input[type=number]:focus {
     border-bottom: 1px solid white;
     box-shadow: 0 1px 0 0 #000;
-    color:white;
+    color:black;
   }
   /* valid color */
   .input-field input[type=text].valid {
@@ -118,18 +124,18 @@ h4{
     color: #000;
   }
 
-.materialize-textarea{
-  color:white;
-}
+  textarea.materialize-textarea:focus:not([readonly]) {
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 0 0 black;
+  }
 
-.materialize-texarea:focus{
-  color:white;
-  border-bottom: 1px solid white;
-}
+  textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: black;
+  }
 
-.materialize-texarea label:focus{
-  color:white;
-}
+
+
+
 
 
 

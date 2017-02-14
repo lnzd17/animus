@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col s12">
+  <div class="col s6 offset-s3">
 <div class="card horizontal green accent-2 z-depth-1 ">
   <div class="card-stacked">
   <div class="cad-content">
@@ -8,8 +8,8 @@
   <ul>
     <li > Category: <%= @project.humanized_labels %> </li>
     <li > Priority: <%= @project.priority %></li>
-    <li> <%= link_to 'Edit', edit_project_path(@project), class: "waves-effect waves-light btn"%></li>
-    <li><%= link_to 'Delete', project_path(@project), method: :delete, class: 'waves-effect waves-light btn' %></li>
+    <li class="right"><%= link_to 'Delete', project_path(@project), method: :delete, class: 'waves-effect waves-light btn-flat' %></li>
+    <li class="right"> <%= link_to 'Edit', edit_project_path(@project), class: "waves-effect waves-light btn-flat"%></li>
   </ul>
 </div>
 </div>
@@ -29,12 +29,12 @@
   <div class="modal-content">
     <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
         <div class="input-field">
-            <%= f.input :note_text, wrapper_html: { class: 'materialize-textarea' } %>
+            <%= f.input :note_text %>
             <br/>
             <br/>
               <br/>
                 <br/>
-            <a class="modal-action modal-close waves-effect waves-green btn"><%= f.submit 'Add' %></a>
+            <a class="modal-action modal-close waves-effect waves-green btn right"><%= f.submit 'Add' %></a>
     <% end %>
   </div>
   </div>
@@ -51,8 +51,8 @@
       <% @project.notes.each do |note| %>
       <div class="col s12 l3">
         <%= link_to project_note_path(@project ,note) do %>
-        <div class="card  white z-depth-1 hoverable">
-          <div class="card-content black-text">
+        <div class="card small deep-purple darken-1 z-depth-1 hoverable">
+          <div class="card-content white-text">
               <%= note.note_text %>
             </div>
           </div>
