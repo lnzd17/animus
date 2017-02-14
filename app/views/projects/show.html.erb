@@ -28,15 +28,12 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
-        <div class="input-field">
+
             <%= f.input :note_text %>
             <br/>
             <br/>
-              <br/>
-                <br/>
-            <a class="modal-action modal-close waves-effect waves-green btn right"><%= f.submit 'Add' %></a>
+            <%= f.submit 'Add', class:"modal-action modal-close waves-effect waves-green btn right" %>
     <% end %>
-  </div>
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @project = Project.find(params[:project_id])
@@ -11,7 +12,7 @@ class NotesController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
-     @project.notes.create(note_params.merge(user: current_user))
+    @project.notes.create(note_params.merge(user: current_user))
     redirect_to project_path(@project)
   end
 
