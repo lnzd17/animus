@@ -9,6 +9,7 @@
 
 <%= f.input :priority %>
 <br />
-<a class="waves-effect waves-light btn"><%= f.submit 'Update' %></a>
+<a class="waves-effect waves-light btn right"><%= f.submit 'Update' %></a>
+<%= link_to 'Back', project_path(@project), class:"waves-effect waves-light right btn right" %>
 <% end %>
 </div>
