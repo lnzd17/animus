@@ -68,3 +68,6 @@ gem 'materialize-sass'
 
 #adds materilze-form
 gem 'materialize-form'
+
+#adds devise
+gem 'devise'

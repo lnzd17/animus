@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @projects = Project.order(:priority).all
     @project= Project.new
@@ -8,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    Project.create(project_params)
+    current_user.projects.create(project_params)
     @project = Project.last
     redirect_to edit_project_path(@project)
   end
@@ -21,11 +24,17 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+    if @project.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
 
   end
 
   def update
     @project = Project.find(params[:id])
+    if @project.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
     @project.update_attributes(project_params)
     redirect_to project_path(@project)
 
@@ -33,6 +42,9 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project = Project.find(params[:id])
+    if @project.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
     @project.destroy
     redirect_to root_path
   end

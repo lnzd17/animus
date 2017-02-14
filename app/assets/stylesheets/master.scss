@@ -62,11 +62,11 @@ li{
   padding: 5px;
 }
 
-h4{
+  h4{
   margin-left:5px;
-}
+  }
 
-/* label color */
+  /* label color */
   .input-field label {
     color: black;
   }
@@ -154,11 +154,12 @@ h4{
 
 
 
-@media only screen and (max-width: 500px) {
-  .new_project{
-    display:block;
-    width:200px;
-    margin-left:auto;
-    margin-right:auto;
+
+  @media only screen and (max-width: 500px) {
+    .new_project{
+      display:block;
+      width:200px;
+      margin-left:auto;
+      margin-right:auto;
+    }
   }
-}
