@@ -45,6 +45,7 @@ class ProjectsController < ApplicationController
     if @project.user != current_user
       return render text: 'Not Allowed', status: :forbidden
     end
+    @project.notes.destroy_all
     @project.destroy
     redirect_to root_path
   end
@@ -52,6 +53,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :note, :label, :priority)
+    params.require(:project).permit(:title, :note, :label, :priority, :summary)
   end
 end

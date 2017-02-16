@@ -1,13 +1,13 @@
 class Project < ApplicationRecord
   belongs_to :user
   has_many :notes
-  
+
   LABELS = {
-    'Painting': "1",
+    'Artwork': "1",
     'Architecture': "2",
     'Furniture': "3",
     'Craft': "4",
-    'Sketch': "5"
+    'App': "5"
   }
 
   def humanized_labels
