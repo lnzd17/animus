@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'projects#index'
+  root 'static_pages#index'
   resources :projects do
     resources :notes
   end

@@ -3,45 +3,42 @@
 
 <% if user_signed_in? %>
 
-<div class="row">
-  <div class="col s10 offset-s2">
+<div class="row" id="category-container">
+  <div id="center-form">
     <%= simple_form_for @project do |f| %>
         <%= f.input_field :label, label:"Category", as: :radio_buttons, collection: Project::LABELS  %>
         <a class="waves-effect waves-light btn"><%= f.submit 'Create' %></a>
     <% end %>
   </div>
-
 </div>
 
 <br/>
 <br/>
 
 
-<div class="row">
-      <% @projects.each do |project| %>
-      <% if current_user && current_user == project.user %>
-        <div class="col s12 l3">
-            <%= link_to project_path(project) do %>
-            <div class="card small green accent-2 z-depth-1 hoverable">
-              <div class="card-content black-text">
-              <span class="card-title"> <%= project.title %></span>
-              <br/>
-               <%= project.summary %>
-                <br/>
-                <%= project.humanized_labels %>
+  <div class="row" id="projects-container">
+        <% @projects.each do |project| %>
+          <% if current_user && current_user == project.user %>
+            <div class="col s4 ">
+                <%= link_to project_path(project) do %>
+                  <div class="card medium green accent-2 z-depth-1 hoverable">
+                    <div class="card-content black-text">
+                    <span class="card-title"> <%= project.title %></span>
+                    <br/>
+                     <%= project.summary %>
+                      <br/>
+                      <%= project.humanized_labels %>
+                    </div>
+                  </div>
+                <%end%>
               </div>
-            </div>
-            <%end%>
-          </div>
-        <% end %>
+            <% end %>
           <% end %>
-</div>
-
-
-<% else %>
-<div class="row">
-  <div class="col s12 center-align">
-    <h1> Sign in to start creating </h1>
   </div>
-</div>
+
+
+
+<%else%>
+  <h1>Please sign in</h1>
+
 <% end %>

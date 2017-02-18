@@ -7,10 +7,9 @@ body{
 }
 
 
-.new_project{
-  display: inline-flex;
-  color:black;
-
+nav .nav-wrapper{
+  height:100px;
+  line-height: 100px;
 }
 
 nav{
@@ -55,6 +54,129 @@ li{
   padding: 5px;
 }
 
+
+
+h4{
+  margin-left:5px;
+}
+
+/* label color */
+.input-field label {
+  color: black;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: black;
+}
+
+/* label focus color */
+.input-field input[type=number]:focus + label {
+  color: black;
+}
+
+/* label underline focus color */
+.input-field input[type=text] {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
+  color:black;
+  width: 400px;
+}
+
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
+  color:black;
+}
+
+/* label underline color */
+.input-field input[type=number] {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
+  color:black;
+  width: 400px;
+}
+
+
+/* label underline focus color */
+.input-field input[type=number]:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
+  color:black;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+
+textarea.materialize-textarea:not([readonly]) {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+    width: 400px;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+    width: 400px;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: black;
+}
+
+
+
+.notices{
+  position: absolute;
+  z-index: 2;
+  padding:10px;
+  margin:10px;
+}
+
+.collection_radio_buttons{
+  width: 100%;
+}
+
+
+
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+  font-size: 0.3rem;
+  height:100%;
+}
+
+#projects-container{
+  width:90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#category-container{
+  width:90vw;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#center-form{
+  display:flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right:auto;
+
+}
+
 .simple_form{
   margin-left:auto;
   margin-right:auto;
@@ -62,104 +184,86 @@ li{
   padding: 5px;
 }
 
-  h4{
-  margin-left:5px;
+#new_project{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+  flex:1;
+
+}
+
+.new_project{
+  display: inline-flex;
+  color:black;
+}
+
+.new_project .radio{
+  border:1px solid black;
+  margin:30px;
+  height:100px;
+  flex: 1 100px;
+}
+
+
+#edit-form-container{
+}
+
+#category-col{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#info-col{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+}
+
+
+.edit_project .radio {
+  border:1px solid black;
+  margin:10px;
+  height:75px;
+  width:75px;
+  flex: 1 75px;
+}
+
+.edit_project .btn {
+  width: 100px;
+  text-align: center;
+  margin: 20px 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .new_project{
+    display:block;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
   }
-
-  /* label color */
-  .input-field label {
-    color: black;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
-    color: black;
-  }
-
-  /* label focus color */
-  .input-field input[type=number]:focus + label {
-    color: black;
-  }
-
-  /* label underline focus color */
-  .input-field input[type=text] {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 #000;
-    color:black;
-  }
-
-
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 #000;
-    color:black;
-  }
-
-  /* label underline color */
-  .input-field input[type=number] {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 #000;
-    color:black;
-  }
-
-
-  /* label underline focus color */
-  .input-field input[type=number]:focus {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 #000;
-    color:black;
-  }
-  /* valid color */
-  .input-field input[type=text].valid {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #000;
-  }
-
-  textarea.materialize-textarea:focus:not([readonly]) {
-      border-bottom: 1px solid black;
-      box-shadow: 0 1px 0 0 black;
-  }
-
-  textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: black;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media only screen and (max-width: 500px) {
-    .new_project{
-      display:block;
-      width:200px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-  }
+}

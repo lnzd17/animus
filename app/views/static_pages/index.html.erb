@@ -1,0 +1,17 @@
+<br/>
+<br/>
+<br/>
+
+
+<div class="center-align">
+  <h3>Welcome To</h3>
+  <h1>Sortibly</h1>
+  <h6><%=link_to 'Sign In', new_user_session_path%> to start sorting</h6>
+  <h6>Don't have an account? <%= link_to "Click here!", new_user_registration_path %></h6>
+</div>
+
+<% if user_signed_in? %>
+  <div>
+    <%= link_to 'Your Projects', projects_path, class:"waves-effect waves-light btn" %>
+  </div>
+<% end %>

@@ -13,8 +13,8 @@
 
     <nav>
     <div class="nav-wrapper deep-purple darken-1">
-          <%= link_to "Animus", projects_path, class:"brand-logo center" %>
-      <ul>
+          <%= link_to "Sortibly", projects_path, class:"brand-logo" %>
+      <ul class="right">
         <% if user_signed_in? %>
             <li>
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
@@ -32,15 +32,20 @@
   </nav>
 
   <% if notice.present? %>
-  <div class="row">
-      <p class="notice blue lighten-3 black-text col s3 offset-s5 center-align"><%= notice %></p>
-  </div>
+  <div class="notices">
+      <div class="row">
+          <p class="notice blue lighten-3 black-text center-align"><%= notice %></p>
+      </div>
+    </div>
+    <% end %>
+    <% if alert.present? %>
+    <div class="notices">
+      <div class="row">
+          <p class="alert red lighten-3 black-text center-align"><%= alert %></p>
+      </div>
+    </div>
   <% end %>
-  <% if alert.present? %>
-  <div class="row">
-      <p class="alert red lighten-3 black-text col s3 ofset-s5 center-align"><%= alert %></p>
-  </div>
-  <% end %>
+
 
 
 
