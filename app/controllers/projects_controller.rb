@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
     end
     @project.notes.destroy_all
     @project.destroy
-    redirect_to root_path
+    redirect_to projects_path
   end
 
   private

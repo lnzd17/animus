@@ -1,61 +1,58 @@
+<div class="card z-depth-1 cadet-blue">
 
-<div class="row">
-  <div class="col s6 offset-s3">
-<div class="card horizontal green accent-2 z-depth-1 ">
-  <div class="card-stacked">
-  <div class="cad-content">
-     <span class="card-title"><h4><%= @project.title %></h4></span>
-  <ul>
-    <li > Summary: <%= @project.summary %> </li>
-    <li > Category: <%= @project.humanized_labels %> </li>
-    <li > Priority: <%= @project.priority %></li>
-    <li class="right"><%= link_to 'Delete', project_path(@project), method: :delete, class: 'waves-effect waves-light btn-flat' %></li>
-    <li class="right"> <%= link_to 'Edit', edit_project_path(@project), class: "waves-effect waves-light btn-flat"%></li>
-  </ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</br>
-</br>
-
-
-<!-- Modal Trigger -->
-<a class="waves-effect waves-light btn right" href="#modal1">Add a Note</a>
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
-
-            <%= f.input :note_text %>
-            <br/>
-            <br/>
-            <%= f.submit 'Add', class:"modal-action modal-close waves-effect waves-green btn right" %>
-    <% end %>
+  <div class="row">
+    <div class="col s12">
+    <h4><%= @project.title %></h4>
+    <ul>
+      <li > Summary: <%= @project.summary %> </li>
+      <li > Category: <%= @project.humanized_labels %> </li>
+      <li > Priority: <%= @project.priority %></li>
+      <li class="right"><%= link_to 'Delete', project_path(@project), method: :delete, class: 'waves-effect waves-light btn' %></li>
+      <li class="right"> <%= link_to 'Edit', edit_project_path(@project), class: "waves-effect waves-light btn "%></li>
+    </ul>
+    </div>
   </div>
-</div>
+
+  </br>
+  </br>
+
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn right" href="#modal1">Add a Note</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
+
+              <%= f.input :note_text %>
+              <br/>
+              <br/>
+              <%= f.submit 'Add', class:"modal-action modal-close waves-effect waves-green btn right" %>
+      <% end %>
+    </div>
+  </div>
 
 
 
 
-<br/>
-<br/>
+  <br/>
+  <br/>
 
-<div class="row">
-  <% if @project.notes.present? %>
-      <% @project.notes.each do |note| %>
-      <div class="col s12 l3">
-        <%= link_to project_note_path(@project ,note) do %>
-        <div class="card small deep-purple darken-1 z-depth-1 hoverable">
-          <div class="card-content white-text">
-              <%= note.note_text %>
+  <div class="row">
+    <% if @project.notes.present? %>
+        <% @project.notes.each do |note| %>
+        <div class="col s12 l3">
+          <%= link_to project_note_path(@project ,note) do %>
+          <div class="card small note-color z-depth-1 hoverable">
+            <div class="card-content white-text">
+                <%= note.note_text %>
+              </div>
             </div>
-          </div>
+          <%end %>
+        </div>
         <%end %>
-      </div>
-      <%end %>
-  <%end %>
+    <%end %>
+  </div>
+
 </div>

@@ -1,15 +1,17 @@
 @import "font-awesome";
 @import "materialize";
 
+
 body{
-  // background-color: #5e35b1;
-  background-color: white;
+  background-color: #FDFDF9;
 }
 
 
 nav .nav-wrapper{
   height:100px;
   line-height: 100px;
+  background-color: #18494C;
+  color: #FDFDF9;
 }
 
 nav{
@@ -18,7 +20,7 @@ nav{
 
 nav .brand-logo{
   margin-left: 15px;
-  color: white;
+  color: #FDFDF9;
 }
 
 
@@ -35,9 +37,9 @@ nav .brand-logo{
 }
 
 .btn{
-  background-color: #ffa000;
+  background-color: #E55B47;
   margin: 5px;
-  color: black;
+  color: #FDFDF9;
 }
 
 a{
@@ -46,7 +48,7 @@ a{
 }
 
 .btn:hover{
-  background-color: #ff6f00;
+  background-color: #A74334;
 }
 
 li{
@@ -158,8 +160,8 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
 #projects-container{
   width:90vw;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
 #category-container{
@@ -205,8 +207,6 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 
-#edit-form-container{
-}
 
 #category-col{
   display:flex;
@@ -236,6 +236,81 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   text-align: center;
   margin: 20px 50px;
 }
+
+.card-title{
+  width: 100%;
+  margin:0px;
+  padding:0px;
+}
+
+.card .card-title{
+  font-size: 50px;
+
+}
+
+.card .card-content{
+    height: 100%;
+    padding:15px;
+}
+
+
+ul{
+  padding:0;
+  margin:0;
+}
+#project-list{
+  padding:0;
+  margin:0;
+}
+
+#project-list li{
+  display:block;
+  padding:0;
+  border:1px solid black;
+  width:90px;
+  height:90px;
+
+}
+
+article{
+  text-align: justify;
+  margin:0;
+  padding:0;
+  line-height: 1.2em;
+
+}
+
+.card.medium {
+  height: 350px;
+  width: 350px;
+}
+
+.card{
+  margin-bottom: 25px;
+  background-color: #56A3A6;
+  color: #FDFDF9;
+}
+
+#project-list #priority{
+  line-height: 75px;
+  text-align: center;
+  font-size:50px;
+  border: 0;
+}
+
+.note-color{
+  background-color: #D9BC70;
+}
+
+.cadet-blue{
+ background-color: #56A3A6;
+ margin:25px;
+ padding:25px;
+
+}
+
+
+
 
 
 
