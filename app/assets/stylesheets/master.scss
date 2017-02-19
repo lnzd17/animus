@@ -38,7 +38,6 @@ nav .brand-logo{
 
 .btn{
   background-color: #E55B47;
-  margin: 5px;
   color: #FDFDF9;
 }
 
@@ -51,10 +50,7 @@ a{
   background-color: #A74334;
 }
 
-li{
-  display: inline-flex;
-  padding: 5px;
-}
+
 
 
 
@@ -119,7 +115,7 @@ h4{
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #000;
+  color: black;
 }
 
 textarea.materialize-textarea:not([readonly]) {
@@ -136,6 +132,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: black;
+}
+
+textarea{
+  color:black;
 }
 
 
@@ -258,18 +258,25 @@ ul{
   padding:0;
   margin:0;
 }
-#project-list{
-  padding:0;
-  margin:0;
-}
+
+
 
 #project-list li{
-  display:block;
   padding:0;
   border:1px solid black;
   width:90px;
   height:90px;
+  margin-left:auto;
+  margin-right:auto;
+}
 
+#project-list-small li{
+  padding:0;
+  border:1px solid black;
+  width:45px;
+  height:45px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 article{
@@ -277,7 +284,6 @@ article{
   margin:0;
   padding:0;
   line-height: 1.2em;
-
 }
 
 .card.medium {
@@ -292,9 +298,17 @@ article{
 }
 
 #project-list #priority{
-  line-height: 75px;
+  line-height: 90px;
   text-align: center;
   font-size:50px;
+  border: 0;
+}
+
+#project-list-small #priority{
+  padding-top:9px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 36px;
   border: 0;
 }
 
@@ -302,12 +316,27 @@ article{
   background-color: #D9BC70;
 }
 
-.cadet-blue{
+.cadet-blue-box{
  background-color: #56A3A6;
  margin:25px;
  padding:25px;
 
 }
+
+#title{
+  font-size:50px;
+  line-height: 0.9em;
+  padding:0;
+  margin: 0;
+}
+
+#delete{
+  width:93.19px;
+  margin-bottom:18px;
+}
+
+
+
 
 
 
