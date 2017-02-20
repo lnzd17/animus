@@ -6,13 +6,13 @@
 
 <div class="row">
   <di class= "col s8 offset-s2">
-  <div class="card medium deep-purple darken-1 z-depth-1">
+  <div class="card medium note-color z-depth-1 ">
     <div class="card-content white-text">
       <%=@note.note_text%>
         <div class="card-action">
-        <%= link_to 'Delete', project_note_path(@project, @note), method: :delete, class: "waves-effect waves-light btn-flat right" %>
+        <%= link_to 'Delete', project_note_path(@project, @note), method: :delete, class: "waves-effect waves-light btn-flat white-text right" %>
 
-          <%= link_to 'Edit', edit_project_note_path(@project, @note),class:"waves-effect waves-light btn-flat right"%>
+          <%= link_to 'Edit', edit_project_note_path(@project, @note),class:"waves-effect waves-light btn-flat white-text right"%>
       </div>
     </div>
   </div>
