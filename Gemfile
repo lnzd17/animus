@@ -71,3 +71,6 @@ gem 'materialize-form'
 
 #adds devise
 gem 'devise'
+
+#trying to get images to load
+gem 'rails_12factor', group: :production
