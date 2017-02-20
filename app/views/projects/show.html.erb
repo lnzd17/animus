@@ -9,7 +9,21 @@
       </div>
       <div class="col s2">
         <ul id="project-list-small">
-          <li ><%= @project.humanized_labels %> </li>
+          <% if @project.humanized_labels["Artwork"] %>
+            <li class="art-image"></li>
+          <% end %>
+          <% if @project.humanized_labels["Architecture"] %>
+            <li class="arch-image"></li>
+          <% end %>
+          <% if @project.humanized_labels["Furniture"] %>
+            <li class="furn-image"></li>
+          <% end %>
+          <% if @project.humanized_labels["Craft"] %>
+            <limclass="craft-image"></li>
+          <% end %>
+          <% if @project.humanized_labels["App"] %>
+            <li class="app-image"></li>
+          <% end %>
           <li id="priority"><%= @project.priority %></li>
         </ul>
       </div>

@@ -147,13 +147,7 @@ textarea{
   margin:10px;
 }
 
-.collection_radio_buttons{
-  width: 100%;
-}
 
-.collection_radio_buttons:hover{
-  outline: 5px dotted red;
-}
 
 
 
@@ -266,7 +260,6 @@ ul{
 
 
 #project-list li{
-  border: 1px solid black;
   padding:0;
   width:70px;
   height:70px;
@@ -276,7 +269,6 @@ ul{
 
 #project-list-small li{
   padding:0;
-  border:1px solid black;
   width:45px;
   height:45px;
   margin-left:auto;
@@ -366,7 +358,7 @@ img{
 }
 
 .art-image{
-  background: url('arch.svg') no-repeat center;
+  background: url('art.svg') no-repeat center;
 
 }
 
@@ -387,12 +379,34 @@ img{
 
 [type="radio"] + label:before, [type="radio"] + label:after{
   transition: none;
+}
+
+.selected-up{
+  bottom:20px;
+}
+
+.selected-left{
+  right:20px;
+}
+
+.collection_radio_buttons{
+  width: 100%;
+}
+
+#category-container .collection_radio_buttons:hover{
+  bottom:20px;
 
 }
 
-.selected-outline{
-  outline: 5px dotted red;
+#edit-form-container .collection_radio_buttons:hover{
+  right:20px;
+
 }
+
+
+
+
+
 
 
 

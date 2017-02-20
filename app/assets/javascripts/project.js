@@ -14,11 +14,25 @@ $(document).on('turbolinks:load', function() {
      craft.addClass('craft-image');
      app.addClass('app-image');
 
-    $('.collection_radio_buttons').click(function(){
-      $('.collection_radio_buttons').removeClass('selected-outline');
-      $(this).addClass('selected-outline');
-
+    $('#category-container .collection_radio_buttons').click(function(){
+      $('.collection_radio_buttons').removeClass('selected-up');
+      $(this).addClass('selected-up');
     });
+
+    $('#edit-form-container .collection_radio_buttons').click(function(){
+      $('.collection_radio_buttons').removeClass('selected-left');
+      $(this).addClass('selected-left');
+    });
+
+  
+
+
+
+
+
+
+
+
 
 
 
