@@ -363,18 +363,18 @@ img{
 }
 
 .arch-image{
-  background: url('arch.svg') no-repeat center;
+  background: image-url('arch.svg') no-repeat center;
 }
 
 .craft-image{
-  background: url('craft.svg') no-repeat center;
+  background: image-url('craft.svg') no-repeat center;
 }
 
 .furn-image{
-  background: url('furn.svg') no-repeat center;
+  background: image-url('furn.svg') no-repeat center;
 }
 .app-image{
-  background: url('app.svg') no-repeat center;
+  background: image-url('app.svg') no-repeat center;
 }
 
 [type="radio"] + label:before, [type="radio"] + label:after{
