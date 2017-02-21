@@ -24,7 +24,14 @@ $(document).on('turbolinks:load', function() {
       $(this).addClass('selected-left');
     });
 
-  
+    $('input.radio_buttons').each(function(){
+      if($(this).is(':checked')){
+        $(this).next().addClass("selected-left");
+      }
+    });
+
+
+
 
 
 

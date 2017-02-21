@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<rect x="8" y="8" class="st0" width="344" height="344"/>
+<g>
+	<rect x="8" y="136" class="st0" width="344" height="216"/>
+	<line class="st0" x1="8" y1="298" x2="352" y2="298"/>
+	<line class="st0" x1="8" y1="244" x2="352" y2="244"/>
+	<line class="st0" x1="8" y1="190" x2="352" y2="190"/>
+	<line class="st0" x1="283.2" y1="136" x2="283.2" y2="352"/>
+	<line class="st0" x1="214.4" y1="136" x2="214.4" y2="352"/>
+	<line class="st0" x1="145.6" y1="136" x2="145.6" y2="352"/>
+	<line class="st0" x1="76.8" y1="136" x2="76.8" y2="352"/>
+</g>
+<circle class="st1" cx="180" cy="36" r="12"/>
+</svg>

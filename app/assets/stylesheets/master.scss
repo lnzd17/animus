@@ -344,7 +344,6 @@ article{
   border: 1px solid black;
   width:100px;
   height: 100px;
-
 }
 
 img{
@@ -352,8 +351,9 @@ img{
   height: 100px;
 }
 
-.collection_radio_buttons{
-
+a img:hover{
+  width:125px;
+  height: 125px;
 
 }
 
@@ -402,6 +402,16 @@ img{
   right:20px;
 
 }
+
+#info-col div{
+  margin-bottom:35px;
+}
+
+#button-row{
+  min-height: 150px;
+
+}
+
 
 
 
