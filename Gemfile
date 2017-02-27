@@ -74,3 +74,6 @@ gem 'devise'
 
 #trying to get images to load
 gem 'rails_12factor', group: :production
+
+#inline svg
+gem 'inline_svg'

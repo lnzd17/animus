@@ -3,10 +3,15 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:12;stroke-miterlimit:10;}
+	.st0{
+		fill:none;
+		stroke:#18494C;
+		stroke-width:12;
+		stroke-miterlimit:10;
+	}
 </style>
 <rect x="56" y="184" class="st0" width="248" height="152"/>
 <path class="st0" d="M56,352.5H8V129.9c0-5.7,4.6-10.4,10.4-10.4h26.9c5.9,0,10.7,4.8,10.7,10.7V352.5z"/>
-<path class="st0" d="M352,353h-48V130.7c0-5.9,4.8-10.7,10.7-10.7h26.2c6.1,0,11.1,5,11.1,11.1V353z"/>
+<path class="st0" d="M352,353h-48V130.7c0-5.9,4.8-10.7,10.7-10.7h26.2c6.1,0,11.1,5,11.1,11.1L352,353L352,353z"/>
 <path class="st0" d="M352,136V18.8c0-6-4.8-10.8-10.8-10.8H17.4C12.2,8,8,12.2,8,17.4V136"/>
 </svg>

@@ -31,6 +31,16 @@ $(document).on('turbolinks:load', function() {
     });
 
 
+    $('.tooltipped').tooltip({delay: 50});
+
+    $('.art-image').addClass('.tooltipped').tooltip({tooltip:"Artwork"});
+    $('.arch-image').addClass('.tooltipped').tooltip({tooltip:"Architecture"});
+    $('.furn-image').addClass('.tooltipped').tooltip({tooltip:"Furniture"});
+    $('.craft-image').addClass('.tooltipped').tooltip({tooltip:"Craft"});
+    $('.app-image').addClass('.tooltipped').tooltip({tooltip:"App"});
+
+
+
 
 
 
