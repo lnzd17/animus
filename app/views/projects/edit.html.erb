@@ -1,24 +1,19 @@
-
-<br/>
-<%= simple_form_for @project do |f| %>
-<div class="row" id="edit-form-container">
-  <div class="col s4 center" id="category-col">
-    <%= f.input :label, label:"Category", as: :radio_buttons, collection: Project::LABELS %>
-  </div>
-
-<div class="col s8" id="info-col">
-  <ul>
-  <li><%= f.input :title %> </li>
-
-  <li><%= f.input :summary %> </li>
-
-  <li><%= f.input :priority %> </li>
-  <br/>
-  <a class="waves-effect waves-light btn center"><%= f.submit 'Update' %></a>
-  <%= link_to 'Back', project_path(@project), class:"waves-effect waves-light  btn center" %>
-</ul>
-
-</div>
-
-<% end %>
+<div class="page-border">
+  <%= simple_form_for @project do |f| %>
+      <div class="row" id="edit-form-container">
+        <div class="col s12" id="center-form-edit">
+        <%= f.input :label, label:"Category", as: :radio_buttons, collection: Project::LABELS %>
+      </div>
+    </div>
+      <div id="info-col">
+        <ul>
+          <li class="col s12"><%= f.input :title %> </li>
+          <li class="col s12"><%= f.input :summary %> </li>
+          <li class="col s12"><%= f.input :priority %> </li>
+          <li class="col s12"><%= f.input :complete %> </li>
+          <a class="waves-effect waves-light btn center"><%= f.submit 'Update' %></a>
+          <%= link_to 'Back', project_path(@project), class:"waves-effect waves-light btn center" %>
+      </ul>
+    </div>
+  <% end %>
 </div>

@@ -1,72 +1,66 @@
-<br/>
-<br/>
+<div class="page-border">
+  <% if user_signed_in? %>
+    <div class="row" id="category-container">
+      <div class="col s12" id="center-form">
+        <%= simple_form_for @project do |f| %>
+            <%= f.input_field :label, label:"Category", as: :radio_buttons, collection: Project::LABELS  %>
+            <a class="waves-effect waves-light btn"><%= f.submit 'Create' %></a>
+        <% end %>
+      </div>
+    </div>
 
-<% if user_signed_in? %>
-
-<div class="row" id="category-container">
-  <div id="center-form">
-    <%= simple_form_for @project do |f| %>
-        <%= f.input_field :label, label:"Category", as: :radio_buttons, collection: Project::LABELS  %>
-        <a class="waves-effect waves-light btn"><%= f.submit 'Create' %></a>
-    <% end %>
-  </div>
-</div>
-
-
-
-<br/>
-<br/>
-
-
-  <div class="row" id="projects-container">
-        <% @projects.each do |project| %>
-          <% if current_user && current_user == project.user %>
-            <div class="col s4 ">
-                <%= link_to project_path(project) do %>
-                  <div class="card z-depth-1 hoverable">
-                    <div class="card-content">
-                    <h5 class="card-title truncate center"> <%= project.title %></h5>
-                    <br/>
-                    <br/>
-                    <div class="row">
-                      <div class="col s8">
-                        <article><%= project.summary %></article>
-                      </div>
-                      <div class="col s4">
-                        <ul id="project-list">
-                            <% if project.humanized_labels["Artwork"] %>
-                              <li class="art-image"></li>
-                            <% end %>
-                            <% if project.humanized_labels["Architecture"] %>
-                              <li class="arch-image"></li>
-                            <% end %>
-                            <% if project.humanized_labels["Furniture"] %>
-                              <li class="furn-image"></li>
-                            <% end %>
-                            <% if project.humanized_labels["Craft"] %>
-                              <li class="craft-image"></li>
-                            <% end %>
-                            <% if project.humanized_labels["App"] %>
-                              <li class="app-image"></li>
-                            <% end %>
-
-                          <br/>
-                          <br/>
-                          <li id="priority"><%= project.priority %></li>
-                        </ul>
-                      </div>
+    <div class="row">
+      <% @projects.each do |project| %>
+        <% if current_user && current_user == project.user %>
+          <div class="col s12 m4 l4 ">
+            <%= link_to project_path(project) do %>
+            <div class="row">
+              <div class="col s12">
+                <div class="card z-depth-1 cadet-blue-box">
+                  <div class="row">
+                    <div class="col s12 center-align">
+                      <h1><%= project.title %></h1>
+                      <% if project.priority != nil %>
+                        <% project.priority.times do %>
+                          <i class="fa fa-circle" aria-hidden="true"></i>
+                        <% end %>
+                        <% (5-project.priority).times do %>
+                          <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                        <% end %>
+                     <% end %>
                     </div>
-                    </div>
+                  <div class="col s12">
+                    <p class="summary"><%= project.summary %> </p>
                   </div>
-                <%end%>
+                  <div class="col s12">
+                    <ul class="category-small">
+                      <% if project.humanized_labels["Artwork"] %>
+                        <li class="art-image"></li>
+                      <% end %>
+                      <% if project.humanized_labels["Architecture"] %>
+                        <li class="arch-image"></li>
+                      <% end %>
+                      <% if project.humanized_labels["Furniture"] %>
+                        <li class="furn-image"></li>
+                      <% end %>
+                      <% if project.humanized_labels["Craft"] %>
+                        <li class="craft-image"></li>
+                      <% end %>
+                      <% if project.humanized_labels["App"] %>
+                        <li class="app-image"></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            <% end %>
-          <% end %>
-  </div>
-
-
-
+            </div>
+          </div>
+        <%end%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 <%else%>
-  <h1>Please sign in</h1>
-
-<% end %>
+    <h1>Please sign in</h1>
+  <% end %>
+</div>

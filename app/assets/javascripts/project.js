@@ -1,7 +1,9 @@
 
 $(document).on('turbolinks:load', function() {
+
   $('.new_project').find('label').css("margin-right", "30px");
      $('.modal').modal();
+
      var artwork = $('.collection_radio_buttons').eq(0);
      var arch = $('.collection_radio_buttons').eq(1);
      var furniture = $('.collection_radio_buttons').eq(2);
@@ -20,13 +22,13 @@ $(document).on('turbolinks:load', function() {
     });
 
     $('#edit-form-container .collection_radio_buttons').click(function(){
-      $('.collection_radio_buttons').removeClass('selected-left');
-      $(this).addClass('selected-left');
+      $('.collection_radio_buttons').removeClass('selected-up');
+      $(this).addClass('selected-up');
     });
 
     $('input.radio_buttons').each(function(){
       if($(this).is(':checked')){
-        $(this).next().addClass("selected-left");
+        $(this).next().addClass("selected-up");
       }
     });
 
@@ -38,6 +40,8 @@ $(document).on('turbolinks:load', function() {
     $('.furn-image').addClass('.tooltipped').tooltip({tooltip:"Furniture"});
     $('.craft-image').addClass('.tooltipped').tooltip({tooltip:"Craft"});
     $('.app-image').addClass('.tooltipped').tooltip({tooltip:"App"});
+
+     $(".button-collapse").sideNav();
 
 
 

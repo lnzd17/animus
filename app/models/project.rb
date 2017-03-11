@@ -14,4 +14,6 @@ class Project < ApplicationRecord
     LABELS.invert[self.label]
   end
 
+
+
 end

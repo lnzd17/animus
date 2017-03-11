@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @priority_dif = 5 - @project.priority
     @note = Note.new
   end
 
@@ -53,6 +54,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :note, :label, :priority, :summary)
+    params.require(:project).permit(:title, :note, :label, :priority, :summary, :complete)
   end
 end

@@ -6,7 +6,24 @@ body{
   background-color: #FDFDF9;
 }
 
+a{
+  color:#E55B47;
 
+}
+
+textarea{
+  color:black;
+}
+
+
+/*page border*/
+.page-border{
+  padding-right:20px;
+  padding-left:20px;
+
+}
+
+/*nav styling*/
 nav .nav-wrapper{
   height:100px;
   line-height: 100px;
@@ -23,320 +40,11 @@ nav .brand-logo{
   color: #FDFDF9;
 }
 
-
-
-[type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after{
-  border-color: black;
-  opacity: 0;
-}
-
-[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {
-
-  background-color: #69f0ae;
-  border-color:#69f0ae;
-  opacity: 0;
-
-}
-
-.btn{
-  background-color: #E55B47;
-  color: #FDFDF9;
-}
-
-a{
-  color:#E55B47;
-
-}
-
-.btn:hover{
-  background-color: #A74334;
-}
-
-
-
-h4{
-  margin-left:5px;
-}
-
-/* label color */
-.input-field label {
-  color: black;
-}
-/* label focus color */
-.input-field input[type=text]:focus + label {
-  color: black;
-}
-
-/* label focus color */
-.input-field input[type=number]:focus + label {
-  color: black;
-}
-
-/* label underline focus color */
-.input-field input[type=text] {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-  color:black;
-  width: 400px;
-}
-
-
-/* label underline focus color */
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-  color:black;
-}
-
-/* label underline color */
-.input-field input[type=number] {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-  color:black;
-  width: 400px;
-}
-
-
-/* label underline focus color */
-.input-field input[type=number]:focus {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-  color:black;
-}
-/* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-}
-/* invalid color */
-.input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
-}
-/* icon prefix focus color */
-.input-field .prefix.active {
-  color: black;
-}
-
-textarea.materialize-textarea:not([readonly]) {
-    border-bottom: 1px solid black;
-    box-shadow: 0 1px 0 0 black;
-    width: 400px;
-}
-
-textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid black;
-    box-shadow: 0 1px 0 0 black;
-    width: 400px;
-}
-
-textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: black;
-}
-
-textarea{
-  color:black;
-}
-
-
-
 .notices{
   position: absolute;
   z-index: 2;
   padding:10px;
   margin:10px;
-}
-
-
-
-
-
-[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
-  font-size: 0.3rem;
-  height:100%;
-  color: rgba(255,255,255,0);
-}
-
-// [type="radio"]:not(:checked):hover + label:hover {
-//   text-align:right;
-//   font-size: 1rem;
-//   height:155%;
-//   color: #E55B47;
-// }
-
-#projects-container{
-  max-width:1000px;
-  // margin-left: auto;
-  // margin-right: auto;
-}
-
-#category-container{
-  max-width:1000px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-#center-form{
-  display:flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right:auto;
-
-}
-
-.simple_form{
-  margin-left:auto;
-  margin-right:auto;
-  max-width: 900px;
-  padding: 5px;
-}
-
-#new_project{
-  flex-wrap: wrap;
-  justify-content: space-around;
-  display: flex;
-  flex:1;
-
-}
-
-.new_project{
-  display: inline-flex;
-  color:black;
-}
-
-.new_project .radio{
-  margin: 30px;
-  height:100px;
-  width:100px;
-  flex: 1 100px;
-}
-
-
-
-#category-col{
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-#info-col{
-  display:flex;
-  flex-direction:column;
-  justify-content: flex-start;
-}
-
-
-.edit_project .radio {
-  margin:25px 10px;
-  height:75px;
-  width:75px;
-  flex: 1 75px;
-}
-
-.edit_project .btn {
-  width: 100px;
-  text-align: center;
-  margin: 20px 50px;
-}
-
-.card-title{
-  width: 100%;
-  margin:0px;
-  padding:0px;
-}
-
-.card .card-title{
-  font-size: 50px;
-
-}
-
-.card .card-content{
-    height: 100%;
-    padding:15px;
-}
-
-
-ul{
-  padding:0;
-  margin:0;
-}
-
-
-
-#project-list li{
-  padding:0;
-  width:70px;
-  height:70px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-#project-list-small li{
-  padding:0;
-  width:45px;
-  height:45px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-article{
-  text-align: justify;
-  margin:0;
-  padding:0;
-  line-height: 1.2em;
-}
-
-.card .medium {
-  max-height: 300px;
-  max-width: 300px;
-}
-
-.card{
-  margin-bottom: 25px;
-  background-color: #56A3A6;
-  color: #FDFDF9;
-}
-
-#project-list #priority{
-  line-height: 90px;
-  text-align: center;
-  font-size:50px;
-  border: 0;
-}
-
-#project-list-small #priority{
-  padding-top:9px;
-  line-height: 45px;
-  text-align: center;
-  font-size: 36px;
-  border: 0;
-}
-
-.note-color{
-  background-color: #D9BC70;
-}
-
-.cadet-blue-box{
- background-color: #56A3A6;
- margin:25px auto;
- padding:25px;
- max-width:1000px;
-
-}
-
-#title{
-  font-size:40px;
-  line-height: 0.9em;
-  padding:0;
-  margin: 0;
-}
-
-#delete{
-  width:93.19px;
-  margin-bottom:18px;
 }
 
 .notice{
@@ -347,22 +55,11 @@ article{
   background-color: #E55B47;
 }
 
-.btn-square{
-  border: 1px solid black;
-  width:100px;
-  height: 100px;
-}
 
-img{
-  width: 100px;
-  height: 100px;
-}
 
-a img:hover{
-  width:125px;
-  height: 125px;
 
-}
+
+/*svg images*/
 
 .art-image{
   background: image-url("art.svg") no-repeat center;
@@ -384,83 +81,204 @@ a img:hover{
   background: image-url('app.svg') no-repeat center;
 }
 
-[type="radio"] + label:before, [type="radio"] + label:after{
-  transition: none;
+img{
+  width: 100px;
+  height: 100px;
 }
 
-.selected-up{
-  bottom:20px;
-}
-
-.selected-left{
-  right:30px;
-}
-
-.collection_radio_buttons{
-  width: 100%;
-}
-
-#category-container .collection_radio_buttons:hover{
-  bottom:20px;
-
+.img-container{
+  background-color: gray;
 }
 
 
+/*form styling*/
 
-#info-col div{
-  margin-bottom:35px;
-}
-
-#button-row{
-  min-height: 150px;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 500px) {
-  .new_project{
-    display:block;
-    width:200px;
+  /*general styling for forms*/
+  .simple_form{
     margin-left:auto;
     margin-right:auto;
+    max-width: 900px;
+    padding: 5px;
   }
+
+
+
+  /*general form input stylings*/
+  .collection_radio_buttons{
+    width: 100%;
+  }
+
+
+
+  .selected-up{
+    bottom:20px;
+  }
+
+  .selected-left{
+    right:30px;
+  }
+
+  /*removes text from radio button labels*/
+  [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+    font-size: 0.3rem;
+    height:100%;
+    color: rgba(255,255,255,0);
+  }
+
+  /*removes radio button circle*/
+
+  [type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after{
+    border-color: black;
+    opacity: 0;
+  }
+
+  [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {
+    opacity: 0;
+
+  }
+
+  [type="radio"] + label:before, [type="radio"] + label:after{
+    transition: none;
+  }
+
+
+
+  /*create new project form*/
+  #new_project{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    flex:1;
+
+  }
+
+  #center-form{
+    display:flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+
+  }
+
+  #category-container{
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  #category-container .collection_radio_buttons:hover{
+    bottom:20px;
+  }
+
+
+
+
+    /*new project input styling*/
+    #new_project .radio{
+      margin: 30px;
+      height:100px;
+      width:100px;
+      flex: 1 100px;
+    }
+
+    #new_project .btn{
+      margin: 30px;
+      height:100px;
+      width:100px;
+      flex: 1 100px;
+    }
+
+
+
+  /*edit project form */
+  #edit-project-container{
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #center-form-edit{
+    display:flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+
+  }
+
+
+  .edit_project {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    flex:1;
+}
+
+  .edit_project .radio {
+    margin:30px;
+    height:100px;
+    width:100px;
+    flex: 1 100px;
+  }
+
+
+
+/*general card styling*/
+
+.card{
+  margin-bottom: 25px;
+  background-color: #56A3A6;
+  color: #FDFDF9;
+}
+
+/* Project card styling */
+
+#project-list li{
+  padding:0;
+  width:70px;
+  height:70px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* Note card styling */
+
+.yellow-note{
+  background-color: #D9BC70;
+}
+
+/*Project Page Styling*/
+.cadet-blue-box{
+ background-color: #56A3A6;
+}
+
+.cadet-blue-box .card-action{
+  background-color:#448284;
+}
+
+
+
+.category-small li{
+  width:100px;
+  height:100px;
+  line-height: 100px;
+}
+
+.summary{
+  height:100px;
+}
+
+
+
+/*button styling*/
+
+.btn{
+  background-color: #E55B47;
+  color: #FDFDF9;
+  margin:5px;
+}
+
+.btn:hover{
+  background-color: #A74334;
 }

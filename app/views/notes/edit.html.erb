@@ -1,9 +1,9 @@
 <div>
-<br />
-<br />
-<%= simple_form_for @note, url: project_note_path(@project, @note) do |f| %>
-<%= f.input :note_text, label:"Note"  %>
-<a class="waves-effect waves-light right btn"><%= f.submit 'Update' %></a>
-<%= link_to 'Back', project_note_path(@project, @note), class:"waves-effect waves-light right btn" %>
-<% end %>
+  <br />
+  <br />
+  <%= simple_form_for @note, url: project_note_path(@project, @note) do |f| %>
+    <%= f.input :note_text, label:"Note"  %>
+    <a class="waves-effect waves-light right btn"><%= f.submit 'Update' %></a>
+    <%= link_to 'Back', project_note_path(@project, @note), class:"waves-effect waves-light right btn" %>
+  <% end %>
 </div>
