@@ -4,7 +4,7 @@
       <div class="card z-depth-1 cadet-blue-box">
         <div class="row">
           <div class="col s12 center-align">
-            <h1><%= @project.title %></h1>
+            <h1 class="truncate"><%= @project.title %></h1>
             <% @project.priority.times do %>
               <i class="fa fa-circle" aria-hidden="true"></i>
             <% end %>
@@ -51,16 +51,16 @@
 
   <!-- Modal Triggers -->
   <div class="row img-container center-align">
-    <div class="col s12 l3">
+    <div class="col s6 l3">
       <a  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add a note" href="#modal1"><%=image_tag("specs.svg", :alt => "test")%></a>
     </div>
-    <div class="col s12 l3">
+    <div class="col s6 l3">
       <a  class="tooltipped svg" data-position="bottom" data-delay="50" data-tooltip="Add a photo" href="#modal2"><%=image_tag("photo.svg", :alt => "test")%></a>
     </div>
-    <div class="col s12 l3">
+    <div class="col s6 l3">
       <a  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add a schedule" href="#modal3"><%=image_tag("date.svg", :alt => "test")%></a>
     </div>
-    <div class="col s12 l3">
+    <div class="col s6 l3">
       <a  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add a link" href="#modal4"><%=image_tag("link.svg", :alt => "test")%></a>
     </div>
   </div>

@@ -1,9 +1,7 @@
-<div>
-  <br />
-  <br />
+<div class="page-border">
   <%= simple_form_for @note, url: project_note_path(@project, @note) do |f| %>
     <%= f.input :note_text, label:"Note"  %>
-    <a class="waves-effect waves-light right btn"><%= f.submit 'Update' %></a>
-    <%= link_to 'Back', project_note_path(@project, @note), class:"waves-effect waves-light right btn" %>
+    <a class="waves-effect waves-light btn"><%= f.submit 'Update' %></a>
+    <%= link_to 'Back', project_note_path(@project, @note), class:"waves-effect waves-light btn" %>
   <% end %>
 </div>

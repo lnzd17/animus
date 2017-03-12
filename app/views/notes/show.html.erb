@@ -1,16 +1,16 @@
-
-<%= link_to project_path(@project) do %>
-  <h3 class="style-h1"><%=@project.title %></h3>
-<% end %>
-
-<div class="row">
-  <div class= "col s8 offset-s2">
-    <div class="card medium yellow-note z-depth-1 ">
-      <div class="card-content">
-        <%=@note.note_text%>
-        <div class="card-action">
-          <%= link_to 'Delete', project_note_path(@project, @note), method: :delete, class: "waves-effect waves-light btn-flat right" %>
-          <%= link_to 'Edit', edit_project_note_path(@project, @note),class:"waves-effect waves-light btn-flat right"%>
+<div class="page-border">
+  <%= link_to project_path(@project) do %>
+    <h3 class="center-align"><%=@project.title %></h3>
+  <% end %>
+  <div class="row">
+    <div class= "col s12">
+      <div class="card medium yellow-note z-depth-1 ">
+        <div class="card-content">
+          <%=@note.note_text%>
+          <div class="card-action">
+                <%= link_to 'Edit', edit_project_note_path(@project, @note)%>
+            <%= link_to 'Delete', project_note_path(@project, @note), method: :delete %>
+          </div>
         </div>
       </div>
     </div>

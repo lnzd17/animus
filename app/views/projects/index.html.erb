@@ -19,7 +19,7 @@
                 <div class="card z-depth-1 cadet-blue-box">
                   <div class="row">
                     <div class="col s12 center-align">
-                      <h1><%= project.title %></h1>
+                      <h1 class="truncate"><%= project.title %></h1>
                       <% if project.priority != nil %>
                         <% project.priority.times do %>
                           <i class="fa fa-circle" aria-hidden="true"></i>
@@ -29,9 +29,6 @@
                         <% end %>
                      <% end %>
                     </div>
-                  <div class="col s12">
-                    <p class="summary"><%= project.summary %> </p>
-                  </div>
                   <div class="col s12">
                     <ul class="category-small">
                       <% if project.humanized_labels["Artwork"] %>

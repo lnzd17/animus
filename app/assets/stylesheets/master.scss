@@ -86,8 +86,8 @@ img{
   height: 100px;
 }
 
-.img-container{
-  background-color: gray;
+.img-container div{
+  margin-bottom:30px;
 }
 
 
@@ -248,6 +248,10 @@ img{
   background-color: #D9BC70;
 }
 
+.yellow-note .card-action{
+  background-color: #ad9659;
+}
+
 /*Project Page Styling*/
 .cadet-blue-box{
  background-color: #56A3A6;
@@ -263,10 +267,11 @@ img{
   width:100px;
   height:100px;
   line-height: 100px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .summary{
-  height:100px;
 }
 
 
