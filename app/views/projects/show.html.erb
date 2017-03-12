@@ -88,7 +88,7 @@
       <% @project.notes.each do |note| %>
         <div class="col s12 l4">
           <%= link_to project_note_path(@project ,note) do %>
-            <div class="card small yellow-note z-depth-1 hoverable">
+            <div class="yellow-note z-depth-1 hoverable">
               <div class="card-content">
                 <%= note.note_text %>
               </div>
