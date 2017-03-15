@@ -12,7 +12,7 @@
               <i class="fa fa-circle-thin" aria-hidden="true"></i>
             <% end %>
           </div>
-        <div class="col s12">
+        <div class="col s12 center-align">
           <p class="summary"><%= @project.summary %> </p>
         </div>
         <div class="col s12">
@@ -41,14 +41,7 @@
       </div>
     </div>
   </div>
-</div>
-
-
-<br/>
-
-
-
-
+  <br/>
   <!-- Modal Triggers -->
   <div class="row img-container center-align">
     <div class="col s6 l3">
@@ -64,25 +57,17 @@
       <a  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add a link" href="#modal4"><%=image_tag("link.svg", :alt => "test")%></a>
     </div>
   </div>
-
-
-
-
   <!-- Modal Structure -->
   <%= simple_form_for @note, url: project_notes_path(@project)  do |f| %>
     <div id="modal1" class="modal">
       <div class="modal-content">
         <%= f.input :note_text %>
-        <br/>
-        <br/>
         <%= f.submit 'Add', class:"modal-action modal-close waves-effect waves-green btn right" %>
         <br/>
       </div>
     </div>
   <% end %>
-
   <br/>
-
   <div class="row">
     <% if @project.notes.present? %>
       <% @project.notes.each do |note| %>

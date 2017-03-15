@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function() {
       $(this).addClass('selected-up');
     });
 
-    $('#edit-form-container .collection_radio_buttons').click(function(){
+    $('#edit-category-container .collection_radio_buttons').click(function(){
       $('.collection_radio_buttons').removeClass('selected-up');
       $(this).addClass('selected-up');
     });

@@ -1,6 +1,9 @@
 @import "font-awesome";
 @import "materialize";
 
+*{
+  outline: none;
+}
 
 body{
   background-color: #FDFDF9;
@@ -11,9 +14,11 @@ a{
 
 }
 
-textarea{
-  color:black;
+.btn{
+  padding:3px;
 }
+
+
 
 
 /*page border*/
@@ -93,12 +98,27 @@ img{
 
 /*form styling*/
 
+textarea{
+  color:black;
+}
+
+input{
+  height:6rem;
+}
+
+input[type=number]{
+  height:6rem;
+}
+
+.input-field{
+  width:100%;
+}
+
   /*general styling for forms*/
   .simple_form{
     margin-left:auto;
     margin-right:auto;
-    max-width: 900px;
-    padding: 5px;
+    max-width: 1000px;
   }
 
 
@@ -114,9 +134,7 @@ img{
     bottom:20px;
   }
 
-  .selected-left{
-    right:30px;
-  }
+
 
   /*removes text from radio button labels*/
   [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
@@ -155,15 +173,11 @@ img{
   #center-form{
     display:flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right:auto;
 
   }
 
   #category-container{
     max-width:1000px;
-    margin-left: auto;
-    margin-right: auto;
 
   }
 
@@ -171,19 +185,15 @@ img{
     bottom:20px;
   }
 
-
-
-
-    /*new project input styling*/
     #new_project .radio{
-      margin: 30px;
+      margin: 20px;
       height:100px;
       width:100px;
       flex: 1 100px;
     }
 
-    #new_project .btn{
-      margin: 30px;
+    #new_project a{
+      margin: 20px;
       height:100px;
       width:100px;
       flex: 1 100px;
@@ -192,34 +202,42 @@ img{
 
 
   /*edit project form */
-  #edit-project-container{
-    max-width:1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  #center-form-edit{
-    display:flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right:auto;
-
-  }
-
-
-  .edit_project {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    display: flex;
-    flex:1;
+.edit_project {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+  flex:1;
 }
 
-  .edit_project .radio {
-    margin:30px;
-    height:100px;
-    width:100px;
-    flex: 1 100px;
-  }
+#center-form-edit{
+  display:flex;
+  justify-content: center;
+
+}
+
+#edit-category-container{
+  max-width:1000px;
+}
+
+#edit-category-container .collection_radio_buttons:hover{
+  bottom:20px;
+}
+
+
+.edit_project .radio {
+  margin:30px;
+  height:100px;
+  width:100px;
+  flex: 1 100px;
+}
+.edit_project a {
+  margin:30px;
+  height:100px;
+  width:100px;
+  flex: 1 100px;
+}
+
 
 
 
@@ -247,6 +265,8 @@ img{
 .yellow-note{
   background-color: #D9BC70;
   padding:25px;
+  color: #FDFDF9;
+  margin-bottom: 20px;
 }
 
 .yellow-note .card-action{
@@ -287,4 +307,9 @@ img{
 
 .btn:hover{
   background-color: #A74334;
+}
+
+/*text styling*/
+.orange-text{
+ color: #E55B47;
 }

@@ -2,18 +2,23 @@ class ProjectsController < ApplicationController
 
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
+
   def index
     @projects = Project.order(:priority).all
     @project= Project.new
   end
 
   def new
+    @project = new
   end
 
   def create
-    current_user.projects.create(project_params)
-    @project = Project.last
-    redirect_to edit_project_path(@project)
+    @project = current_user.projects.create(project_params)
+    if @project.valid?
+      redirect_to project_path(@project)
+    else
+       render :new, status: :unprocessable_entity
+    end
   end
 
 

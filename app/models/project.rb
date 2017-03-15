@@ -2,6 +2,8 @@ class Project < ApplicationRecord
   belongs_to :user
   has_many :notes
 
+  validates :label, presence: true
+
   LABELS = {
     'Artwork': "1",
     'Architecture': "2",
