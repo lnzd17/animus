@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   has_many :notes
 
   validates :label, presence: true
+  validates :priority, :numericality => { :less_than_or_equal_to => 5 }
 
   LABELS = {
     'Artwork': "1",

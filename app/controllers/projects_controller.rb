@@ -42,7 +42,11 @@ class ProjectsController < ApplicationController
       return render text: 'Not Allowed', status: :forbidden
     end
     @project.update_attributes(project_params)
-    redirect_to project_path(@project)
+      if @project.valid?
+        redirect_to project_path(@project)
+      else
+         render :edit, status: :unprocessable_entity
+      end
 
   end
 
