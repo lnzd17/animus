@@ -14,9 +14,6 @@ a{
 
 }
 
-.btn{
-  padding:3px;
-}
 
 
 
@@ -48,16 +45,17 @@ nav .brand-logo{
 .notices{
   position: absolute;
   z-index: 2;
-  padding:10px;
-  margin:10px;
+  left:30%;
 }
 
 .notice{
-  background-color: #56A3A6;
+  background-color: rgba(86, 163, 166,0.5);
+  padding:10px;
 }
 
 .alert{
-  background-color: #E55B47;
+  background-color: rgba(229, 91, 71,0.5);
+  padding:10px;
 }
 
 
@@ -113,26 +111,24 @@ input[type=number]{
 .input-field{
   width:100%;
 }
-
-  /*general styling for forms*/
-  .simple_form{
-    margin-left:auto;
-    margin-right:auto;
-    max-width: 1000px;
-  }
-
+/*general styling for forms*/
+.simple_form{
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 1000px;
+}
 
 
-  /*general form input stylings*/
-  .collection_radio_buttons{
-    width: 100%;
-  }
+/*general form input stylings*/
+.collection_radio_buttons{
+  width: 100%;
+}
 
 
 
-  .selected-up{
-    bottom:20px;
-  }
+.selected-up{
+  bottom:20px;
+}
 
 
 
@@ -303,6 +299,8 @@ input[type=number]{
   background-color: #E55B47;
   color: #FDFDF9;
   margin:5px;
+  padding:5px;
+  min-height:3rem;
 }
 
 .btn:hover{
